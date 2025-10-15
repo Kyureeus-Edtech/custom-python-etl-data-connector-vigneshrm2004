@@ -1,6 +1,4 @@
-Here’s a complete **`README.md`** content for your SonarQube ETL project, tailored to your setup:
 
-```markdown
 # SonarQube Metrics ETL Project
 
 This project fetches SonarQube metrics for a specific project and stores them in MongoDB using Python. It uses the SonarQube API to retrieve project-level metrics such as bugs, code smells, vulnerabilities, coverage, and duplication density.
@@ -37,14 +35,10 @@ Create a `.env` file in the project root with the following:
 ```env
 PORT=4000
 SONAR_API_BASE=http://localhost:9000/api
-SONAR_TOKEN=<your_sonar_token_here>
+SONAR_TOKEN=sqa_e6b6d99027a85d57c66b6dcf7dd2eca7f0704026
 DB_URI=mongodb://localhost:27017/vi
-SONAR_PROJECT_KEY=<your_project_key_here>
+SONAR_PROJECT_KEY=VIGS
 ````
-
-Replace `<your_sonar_token_here>` and `<your_project_key_here>` with your actual SonarQube token and project key.
-
----
 
 ##  Usage
 
@@ -63,7 +57,7 @@ This step uploads your code metrics to SonarQube.
 2. **Run the Python ETL script**:
 
 ```bash
-python n.py
+python etl_connector.py
 ```
 
 The script will:
@@ -135,9 +129,4 @@ python-dotenv
 * [SonarQube API Documentation](https://sonarcloud.io/web_api)
 * [MongoDB Python Driver (PyMongo)](https://pymongo.readthedocs.io/)
 
-```
 
----
-
-If you want, I can **also add a “How to schedule ETL daily” section** for automatic metric collection in this README. Do you want me to do that?
-```
